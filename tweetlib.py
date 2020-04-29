@@ -1,3 +1,4 @@
+# just use this file to get the accesstokens and api.
 import tweepy
 def twitter_api():
     tokenfile = '../accesstokens'

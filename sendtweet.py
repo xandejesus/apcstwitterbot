@@ -1,3 +1,4 @@
+# use this program to send tweets through the API. It works pretty well
 import tweepy
 import requests
 import os

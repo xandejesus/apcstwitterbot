@@ -1,8 +1,7 @@
+# The driver code for the bot. Doesn't look like much, but the bot wouldn't be able to run without it.
+# These are two simple functions that do what they look like they do
 import tweepy
-import requests
-import os
 from tweetlib import twitter_api
-api = twitter_api()
 def contains(text, words):
     wrd = len(words)
     r = False
@@ -10,17 +9,6 @@ def contains(text, words):
         r = words[wrd - 1] in text
         wrd = wrd - 1
     return r
-def tweet_image(url, message):
-    filename = 'temp.jpg'
-    request = requests.get(url, stream=True)
-    if request.status_code == 200:
-        with open(filename, 'wb') as image:
-            for chunk in request:
-                image.write(chunk)
-        api.update_with_media(filename, status=message)
-        os.remove(filename)
-    else:
-        print("Unable to download Image")
 
 def sir(text):
     for c in text:
@@ -32,6 +20,3 @@ def sir(text):
 words = ['hello', 'stuff']
 text = "Hello, this is stuff"
 
-url = 'https://pbs.twimg.com/media/D1Je_eSXQAEIyRV.jpg'
-message = '#NewProfilePic'
-tweet_image(url, messagv)
