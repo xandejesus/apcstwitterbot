@@ -2,3 +2,9 @@
 Final Project for APCS, not in Java but in Python
 
 ## What does it Do?
+* arbybot takes a string, and sees if there are certain passages that LOOK LIKE THIS!
+* It goes through certain people's Tweets, and sends the message "Sir, this is an Arby's" if  things look to out of hand.
+## Sources 
+* Tren Black (College YouTuber): https://youtu.be/n5TgwdAbCFk
+* Tweepy Documentation: http://docs.tweepy.org/en/latest/
+* stackoverflow: https://stackoverflow.com/questions/31748444/how-to-update-twitter-status-with-image-using-image-url-in-tweepy
