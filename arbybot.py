@@ -1,5 +1,8 @@
 # The driver code for the bot. Doesn't look like much, but the bot wouldn't be able to run without it.
 # These are two simple functions that do what they look like they do
+#todo: make a scraper that gets King Mango's tweets(not that hard)
+# sort the tweets by priority of least to most crazy, likely factoring in likes and comments
+
 import tweepy
 from tweetlib import twitter_api
 def contains(text, words):

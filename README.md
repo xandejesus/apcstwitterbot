@@ -8,3 +8,8 @@ Final Project for APCS, not in Java but in Python
 * Tren Black (College YouTuber): https://youtu.be/n5TgwdAbCFk
 * Tweepy Documentation: http://docs.tweepy.org/en/latest/
 * stackoverflow: https://stackoverflow.com/questions/31748444/how-to-update-twitter-status-with-image-using-image-url-in-tweepy
+* How to make a TweetMiner to get tweets: https://towardsdatascience.com/tweepy-for-beginners-24baf21f2c25
+
+## To Do
+* Collect data, see which Tweets get the most likes and engagement, while following the ArbyBot Criteria
+* Implement Machine Learning somehow
