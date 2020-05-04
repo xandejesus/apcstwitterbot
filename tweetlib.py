@@ -18,8 +18,6 @@ def twitter_api():
 def getTweets(user):
     api = twitter_api()
     tweets = api.user_timeline(screen_name=user)
-    first_tweet = tweets[0]
-    print(first_tweet.text)
     return tweets
 # Duplicate of sendtweet.py, just making things accessible in one file.
 
