@@ -2,7 +2,11 @@
 import tweepy
 import requests
 import os
-
+import re
+from nltk.tokenize import WordPunctTokenizer
+from google.cloud import language
+from google.cloud.language import enums
+from google.cloud.language import types
 
 def twitter_api():
     tokenfile = '../accesstokens'
@@ -14,13 +18,44 @@ def twitter_api():
     api = tweepy.API(auth)
     return api
 
-# idk, gets tweets
-def getTweets(user):
-    api = twitter_api()
-    tweets = api.user_timeline(screen_name=user)
-    return tweets
-# Duplicate of sendtweet.py, just making things accessible in one file.
+def getSince(user):
+    s = user + ".txt"
+    r = open(s, 'r')
+    lasttweet = r.read()
+    r.close()
+    return r
+def addSince(user, idnum):
+    s = user + ".txt"
+    w = open(s, 'w')
+    w.write(idnum)
+    
 
+
+# From freeCodeCamp
+
+def cleantweet(tweet):
+    user_removed = re.sub(r'@[A-Za-z0-9]+','',tweet)
+    link_removed = re.sub('https?://[A-Za-z0-9./]+','',user_removed)
+    number_removed = re.sub('[^a-zA-Z]',' ',link_removed)
+    lower_case_tweet = number_removed.lower()
+    tok = WordPunctTokenizer()
+    words = tok.tokenize(lower_case_tweet)
+    clean_tweet = (' '.join(words)).strip()
+    return clean_tweet
+
+def get_sentiment_score(tweet):
+    client = language.LanguageServiceClient()
+    document = types\
+            .Document(content=tweet, 
+                    type=enums.Document.Type.PLAIN_TEXT)
+    sentiment_score = client\
+                    .analyze_sentiment(document = document)\
+                    .document_sentiment\
+                    .score
+    return sentiment_score
+
+
+# Easy for the bot to be able to send tweets from a twitter bot. IDK
 def tweet_image(url, message):
     api = twitter_api()
     filename = 'temp.jpg'
