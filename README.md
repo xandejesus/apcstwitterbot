@@ -10,7 +10,7 @@ Final Project for APCS, not in Java but in Python
 	* Use bash and do stuff. To get started, get a twitter 
 	* (It's actually generally unusable, lo siento)
 	* Cool proof of concept tho
-
+	* It uses a cron subroutine. Legit the only original feature on my end, and it's a line of code.
 ## Sources 
 * Tren Black (College YouTuber): https://youtu.be/n5TgwdAbCFk
 * Tweepy Documentation: http://docs.tweepy.org/en/latest/
