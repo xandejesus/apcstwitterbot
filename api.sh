@@ -8,5 +8,7 @@
 # @description : 
 ######################################################################
 ./reset.sh
+# u have to manually run this because it is not working.
+export GOOGLE_APPLICATION_CREDENTIALS=~fun/creds.json
 python3 api.py
 

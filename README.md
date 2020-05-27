@@ -8,6 +8,9 @@ Final Project for APCS, not in Java but in Python
 ## How do I use it?
 * Bash
 	* Use bash and do stuff. To get started, get a twitter 
+	* (It's actually generally unusable, lo siento)
+	* Cool proof of concept tho
+
 ## Sources 
 * Tren Black (College YouTuber): https://youtu.be/n5TgwdAbCFk
 * Tweepy Documentation: http://docs.tweepy.org/en/latest/
